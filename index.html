@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-A-Fish!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Hamburger Menyn -->
+  <div id="hamburger-menu">
+    <div id="hamburger-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  
+  <nav id="menu-dropdown"></nav>
+    
+  <!-- Användare registrationsform i section id="profile" -->
+  <section id="profile">
+      <h1>Whac-A-Fish</h1>
+      <form id="registration-form">
+        <input id="player-name" type="text" placeholder="Give a username" required>
+        <button id="btn-start" type="submit">Done</button>
+      </form>
+  </section>
+
+  <div id="custom-cursor">
+    <img src="fiska.png" alt="fishing rod">
+  </div>
+
+  <div id="game-section" class="hidden">
+    <h2>Player: <span id="player-display"></span></h2>
+
+    <h2>Time Left:</h2>
+    <h2 id="time-left">15</h2>
+
+    <div class="grid">
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+      <div class="square" id="9"></div>
+    </div>
+
+    <button id="start-game-btn">Start Game</button>
+    <h3 id="hit-miss-text"></h3>
+    <button id="play-again-btn" style="display: none;">Play Again</button>
+  </div>
+
+  <div id="high-score-section" class="hidden">
+    <h2>🏆 High Score</h2>
+    <div id="history-list"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

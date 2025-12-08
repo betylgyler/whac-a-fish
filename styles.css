@@ -1,0 +1,434 @@
+body {
+	font-family: "Bitcount Prop Single", system-ui;
+	text-align: center;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	cursor: auto;
+}
+
+#hamburger-menu {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 10000;
+	cursor: pointer;
+}
+
+#hamburger-icon {
+	width: 40px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+	border-radius: 5px;
+	transition: all 0.2s ease;
+}
+
+#hamburger-icon:hover {
+	background-color: rgba(255, 255, 255, 1);
+	transform: scale(1.1);
+}
+
+#hamburger-icon:active {
+	transform: scale(0.95);
+}
+
+.bar {
+	width: 100%;
+	height: 4px;
+	background-color: black;
+	border-radius: 2px;
+}
+
+#menu-dropdown {
+	position: fixed;
+	top: 80px;
+	left: 20px;
+	z-index: 9999;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav#menu-dropdown button,
+.nav-button {
+	display: block;
+	width: 200px;
+	margin: 5px 0;
+	padding: 15px;
+	font-size: 18px;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Bitcount Prop Single", system-ui;
+}
+
+nav#menu-dropdown button:hover,
+.nav-button:hover {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#profile {
+	width: 100%;
+	height: 100vh;
+	background: url("scenery.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#profile h1 {
+	color: white;
+	text-shadow: 2px 2px 4px black;
+	margin-bottom: 20px;
+}
+
+#profile input {
+	padding: 10px 20px;
+	font-size: 18px;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-family: "Bitcount Prop Single", system-ui;
+	margin: 10px;
+}
+
+#game-section {
+	width: 100%;
+	height: 100vh;
+	background: url("grass.jpeg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#start-game-btn {
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.grid {
+	cursor: none;
+}
+
+#custom-cursor {
+	position: fixed;
+	pointer-events: none;
+	z-index: 9999;
+	width: 80px;
+	height: 80px;
+}
+
+#custom-cursor img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+h2 {
+	margin: 10px 0;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px black;
+}
+
+h1, h3 {
+	color: white;
+	text-shadow: 2px 2px 4px black;
+}
+
+.grid {
+	width: 606px;
+	height: 606px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px auto;
+}
+
+.square {
+	height: 200px;
+	width: 200px;
+	border: solid black 1px;
+	cursor: none;
+	background-image: url("water.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.1s ease;
+	user-select: none;
+}
+
+.square:active {
+	transform: scale(0.95);
+}
+
+.fish {
+	background-image: url("fish.png"), url("water.jpg");
+	background-size: 70%, cover;
+	background-position: center, center;
+	background-repeat: no-repeat, no-repeat;
+	animation: fishAppear 0.2s ease;
+}
+
+@keyframes fishAppear {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+#hit-miss-text {
+	font-size: 36px;
+	color: white;
+	text-shadow: 2px 2px 4px black;
+	min-height: 50px;
+	transition: all 0.2s ease;
+	font-weight: bold;
+}
+
+#hit-miss-text.hit {
+	color: #4CAF50;
+	transform: scale(1.2);
+	text-shadow: 0 0 10px #4CAF50, 2px 2px 4px black;
+}
+
+#hit-miss-text.miss {
+	color: #f44336;
+	transform: scale(1.2);
+	text-shadow: 0 0 10px #f44336, 2px 2px 4px black;
+}
+
+#high-score-section {
+	width: 100%;
+	height: 100vh;
+	background: url("grass.jpeg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	padding: 20px;
+}
+
+#history-list {
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	max-width: 800px;
+	margin: 20px auto;
+	width: 100%;
+}
+
+#history-list table {
+	width: 100%;
+	max-width: 800px;
+	border-collapse: collapse;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#history-list th {
+	color: white;
+	padding: 15px;
+	text-align: center;
+	font-size: 20px;
+}
+
+#history-list td {
+	padding: 12px;
+	text-align: center;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 18px;
+}
+
+button {
+	margin: 10px;
+	padding: 10px 20px;
+	font-size: 18px;
+	cursor: pointer;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-family: "Bitcount Prop Single", system-ui;
+	transition: all 0.2s ease;
+	min-width: 120px;
+	min-height: 44px;
+}
+
+button:hover {
+	background-color: #45a049;
+	transform: scale(1.05);
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+
+.hidden {
+	display: none !important;
+}
+
+
+#menu-dropdown {
+	display: none;
+}
+
+#custom-cursor {
+	display: none;
+}
+
+#game-section {
+	display: none;
+}
+
+#high-score-section {
+	display: none;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#profile, #game-section, #high-score-section {
+	animation: fadeIn 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+
+	.grid {
+		width: 90vw;
+		max-width: 400px;
+		height: auto;
+		padding: 5px;
+	}
+	
+	.square {
+		width: calc(33.333% - 4px);
+		height: calc(33.333vw - 4px);
+		max-width: 130px;
+		max-height: 130px;
+	}
+	
+	
+	h1 {
+		font-size: 28px;
+		padding: 0 15px;
+		text-align: center;
+	}
+	
+	h2 {
+		font-size: 18px;
+		padding: 0 15px;
+		text-align: center;
+	}
+	
+	h3 {
+		font-size: 16px;
+	}
+	
+
+	button {
+		min-width: 140px;
+		min-height: 48px;
+		font-size: 20px;
+		padding: 12px 24px;
+	}
+	
+	
+	#hamburger-menu {
+		top: 15px;
+		left: 15px;
+	}
+	
+	#hamburger-icon {
+		width: 50px;
+		height: 40px;
+		padding: 12px;
+	}
+	
+	#menu-dropdown {
+		top: 75px;
+		left: 15px;
+		width: calc(100% - 30px);
+		max-width: 250px;
+	}
+	
+	nav#menu-dropdown button {
+		width: 100%;
+		min-height: 48px;
+		font-size: 18px;
+	}
+	
+	
+	input {
+		width: 85%;
+		max-width: 300px;
+		font-size: 18px;
+		padding: 12px;
+		min-height: 48px;
+	}
+	
+	
+	table {
+		font-size: 12px;
+		width: 100%;
+	}
+	
+	table th, table td {
+		padding: 8px 4px;
+	}
+	
+	
+	#custom-cursor {
+		width: 60px;
+		height: 60px;
+	}
+	
+	
+	#high-score-section {
+		padding: 15px 10px;
+	}
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.grid {
+		width: 500px;
+		height: 500px;
+	}
+	
+	.square {
+		width: 164px;
+		height: 164px;
+	}
+}
