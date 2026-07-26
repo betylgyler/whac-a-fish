@@ -19,6 +19,6 @@ Whac-a-Fish is an interactive game where the player catches fish to earn points.
 - Organizing JavaScript code
 - Building an interactive web application
 
-## Author
+## By
 
 Betül Güler
